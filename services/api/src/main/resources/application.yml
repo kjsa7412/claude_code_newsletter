@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: ${SUPABASE_DB_URL}
+    username: ${SUPABASE_DB_USERNAME:postgres}
+    password: ${SUPABASE_DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 10
+      minimum-idle: 2
+  mybatis:
+    mapper-locations: classpath:mapper/*.xml
+    configuration:
+      map-underscore-to-camel-case: true
+      default-fetch-size: 100
+      default-statement-timeout: 30
+
+supabase:
+  jwt:
+    secret: ${SUPABASE_JWT_SECRET}
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+cors:
+  allowed-origins: ${NEXT_PUBLIC_APP_URL:http://localhost:3000}
+
+logging:
+  level:
+    com.prompthub.api: DEBUG
+    org.mybatis: DEBUG

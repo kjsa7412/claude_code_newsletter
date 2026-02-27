@@ -1,0 +1,24 @@
+# Environment variables - never commit secrets
+.env
+.env.local
+.env.*.local
+
+# Spring Boot local profile (may contain real secrets)
+services/api/src/main/resources/application-local.yml
+
+# Node
+node_modules/
+apps/web/.next/
+apps/web/out/
+
+# Gradle
+.gradle/
+services/api/build/
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+
+# macOS
+.DS_Store

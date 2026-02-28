@@ -9,8 +9,8 @@
          map-underscore-to-camel-case=true 이지만 alias 컬럼은 명시 필요
          ================================================================ -->
     <resultMap id="templateResultMap" type="com.prompthub.api.template.Template">
-        <id     property="id"             column="id"               javaType="java.util.UUID"/>
-        <result property="ownerId"        column="owner_id"         javaType="java.util.UUID"/>
+        <id     property="id"             column="id"               javaType="java.util.UUID" typeHandler="org.apache.ibatis.type.UUIDTypeHandler"/>
+        <result property="ownerId"        column="owner_id"         javaType="java.util.UUID" typeHandler="org.apache.ibatis.type.UUIDTypeHandler"/>
         <result property="title"          column="title"/>
         <result property="description"    column="description"/>
         <result property="isPublic"       column="is_public"/>

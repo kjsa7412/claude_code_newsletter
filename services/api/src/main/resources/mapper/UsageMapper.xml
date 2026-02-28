@@ -8,9 +8,9 @@
          ResultMap: usage_events 테이블 매핑
          ================================================================ -->
     <resultMap id="usageEventResultMap" type="com.prompthub.api.usage.UsageEvent">
-        <id     property="id"         column="id"          javaType="java.util.UUID"/>
-        <result property="templateId" column="template_id" javaType="java.util.UUID"/>
-        <result property="userId"     column="user_id"     javaType="java.util.UUID"/>
+        <id     property="id"         column="id"          javaType="java.util.UUID" typeHandler="org.apache.ibatis.type.UUIDTypeHandler"/>
+        <result property="templateId" column="template_id" javaType="java.util.UUID" typeHandler="org.apache.ibatis.type.UUIDTypeHandler"/>
+        <result property="userId"     column="user_id"     javaType="java.util.UUID" typeHandler="org.apache.ibatis.type.UUIDTypeHandler"/>
         <result property="usedAt"     column="used_at"     javaType="java.time.OffsetDateTime"/>
     </resultMap>
 

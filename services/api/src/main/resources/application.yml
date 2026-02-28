@@ -8,12 +8,14 @@ spring:
       connection-timeout: 20000
       maximum-pool-size: 10
       minimum-idle: 2
-  mybatis:
-    mapper-locations: classpath:mapper/*.xml
-    configuration:
-      map-underscore-to-camel-case: true
-      default-fetch-size: 100
-      default-statement-timeout: 30
+      initialization-fail-timeout: -1
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    default-fetch-size: 100
+    default-statement-timeout: 30
 
 supabase:
   jwt:
@@ -35,6 +37,9 @@ management:
   endpoint:
     health:
       show-details: never
+  health:
+    db:
+      enabled: false
 
 logging:
   level:

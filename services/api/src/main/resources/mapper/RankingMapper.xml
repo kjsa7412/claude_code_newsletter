@@ -9,10 +9,10 @@
          ================================================================ -->
     <resultMap id="rankingResultMap" type="com.prompthub.api.ranking.RankingDto">
         <result property="rank"             column="rank"/>
-        <result property="templateId"       column="template_id"       javaType="java.util.UUID" typeHandler="org.apache.ibatis.type.UUIDTypeHandler"/>
+        <result property="templateId"       column="template_id"       javaType="java.util.UUID"/>
         <result property="title"            column="title"/>
         <result property="description"      column="description"/>
-        <result property="ownerId"          column="owner_id"          javaType="java.util.UUID" typeHandler="org.apache.ibatis.type.UUIDTypeHandler"/>
+        <result property="ownerId"          column="owner_id"          javaType="java.util.UUID"/>
         <result property="ownerDisplayName" column="owner_display_name"/>
         <result property="ownerAvatarUrl"   column="owner_avatar_url"/>
         <result property="useCountWeekly"   column="use_count_weekly"/>

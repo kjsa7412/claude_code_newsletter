@@ -12,6 +12,7 @@ spring:
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
+  type-handlers-package: com.prompthub.api.common
   configuration:
     map-underscore-to-camel-case: true
     default-fetch-size: 100

@@ -27,6 +27,15 @@ server:
 cors:
   allowed-origins: ${NEXT_PUBLIC_APP_URL:http://localhost:3000}
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+
 logging:
   level:
     com.prompthub.api: DEBUG
